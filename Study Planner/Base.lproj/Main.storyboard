@@ -31,7 +31,7 @@
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KG5-77-mgV">
-                                <rect key="frame" x="0.0" y="65" width="375" height="602"/>
+                                <rect key="frame" x="0.0" y="65" width="375" height="553"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="af7-0d-HoB">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -86,7 +86,7 @@
                                         </constraints>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YQG-hY-x2s">
-                                        <rect key="frame" x="0.0" y="88" width="375" height="514"/>
+                                        <rect key="frame" x="0.0" y="88" width="375" height="465"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" red="0.90613797470432722" green="0.88987504690670938" blue="0.92667354060913709" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
@@ -169,7 +169,7 @@
                                         <barButtonItem key="leftBarButtonItem" title="Back" width="15" springLoaded="YES" id="Ydj-3Z-VTe">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
-                                                <segue destination="9pv-A4-QxB" kind="show" identifier="BackToDailyToDo" id="2OM-ku-Eqt"/>
+                                                <segue destination="49e-Tb-3d3" kind="presentation" identifier="BackToDailyToDo" id="DmL-uf-O0c"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="3Qf-E7-CTW">
@@ -385,7 +385,7 @@
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mcg-D6-CP2">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
-                                                <segue destination="9pv-A4-QxB" kind="show" identifier="TaskAdded" id="9QO-PS-GpY"/>
+                                                <segue destination="49e-Tb-3d3" kind="presentation" identifier="TaskAdded" id="rhf-Ks-oKa"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Add" style="done" id="jku-eW-fd1">
@@ -542,7 +542,7 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="DmL-uf-O0c"/>
         <segue reference="nH7-a3-2Ga"/>
-        <segue reference="2OM-ku-Eqt"/>
     </inferredMetricsTieBreakers>
 </document>
