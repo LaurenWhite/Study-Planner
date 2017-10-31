@@ -43,6 +43,9 @@ class TaskDetalisViewController: UIViewController {
     @IBAction func editTaskButtonPressed(_ sender: UIBarButtonItem) {
         // HOW CAN YOU PASS THE CURRENT TASK TO THE TASK EDITOR FROM HERE?
         //self.sendExistingTask?(task!) //<- did not work :(
+        let existingTask = self.task
+        let TaskEditorVC = TaskEditorViewController()
+        TaskEditorVC.task = existingTask
         self.performSegue(withIdentifier: "EditTask", sender: nil)
     }
     
@@ -56,5 +59,12 @@ class TaskDetalisViewController: UIViewController {
         }
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let existingTask = self.task
+        if let TaskEditorViewController = segue.destination as? TaskEditorViewController{
+            TaskEditorViewController.task = existingTask
+        }
+    }
     
 }

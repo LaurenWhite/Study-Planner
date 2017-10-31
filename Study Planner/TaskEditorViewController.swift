@@ -39,13 +39,13 @@ class TaskEditorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*if let task = self.task {
+        if let task = self.task {
             self.title = task.taskTitle
             nameTextField.text = task.taskTitle
             dueDatePicker.date = task.dueDate
         }else{
-            nameTextField.text = "New Text"
-        }*/
+            nameTextField.text = ""
+        }
     }
     
     private func editExistingTask(task: Task){
