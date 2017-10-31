@@ -306,6 +306,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q48-A7-dTt">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="23"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textShadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Focus Timer" id="SbX-yu-g8g"/>
+                                </items>
+                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVV-hb-FvP" userLabel="Timer">
                                 <rect key="frame" x="169" y="297" width="36.5" height="73"/>
                                 <attributedString key="attributedText">
@@ -330,13 +342,35 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hED-VI-Fw3">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="63f-P7-hfN">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Item" id="fam-Eg-X64"/>
-                                </items>
-                            </toolbar>
+                                <subviews>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hED-VI-Fw3">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="44"/>
+                                        <items>
+                                            <barButtonItem title="Finished!" style="done" id="fam-Eg-X64">
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <segue destination="49e-Tb-3d3" kind="presentation" id="sXk-D5-sPS"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                        <color key="barTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </toolbar>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfc-WH-jEv">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="44"/>
+                                        <items>
+                                            <barButtonItem title="Save For Later" id="AJu-S2-wqZ">
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <segue destination="49e-Tb-3d3" kind="presentation" id="lbK-E5-Zve"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                        <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </toolbar>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdJ-pS-Qs9">
                                 <rect key="frame" x="0.0" y="79" width="375" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -347,11 +381,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Q48-A7-dTt" firstAttribute="trailing" secondItem="RtW-Vj-EI3" secondAttribute="trailing" id="3FG-WX-A0M"/>
                             <constraint firstItem="tVV-hb-FvP" firstAttribute="centerX" secondItem="oXn-pF-Otc" secondAttribute="centerX" id="977-HJ-I7l"/>
+                            <constraint firstItem="63f-P7-hfN" firstAttribute="leading" secondItem="RtW-Vj-EI3" secondAttribute="leading" id="Js8-Vg-qog"/>
                             <constraint firstItem="RtW-Vj-EI3" firstAttribute="trailing" secondItem="FYD-cb-Ecl" secondAttribute="trailing" id="au7-6u-PoG"/>
                             <constraint firstItem="tVV-hb-FvP" firstAttribute="top" secondItem="FYD-cb-Ecl" secondAttribute="bottom" constant="25" id="d41-E0-eJ6"/>
+                            <constraint firstItem="63f-P7-hfN" firstAttribute="trailing" secondItem="RtW-Vj-EI3" secondAttribute="trailing" id="g8X-Is-s7z"/>
                             <constraint firstItem="FYD-cb-Ecl" firstAttribute="leading" secondItem="RtW-Vj-EI3" secondAttribute="leading" id="pMd-tN-YVE"/>
+                            <constraint firstItem="Q48-A7-dTt" firstAttribute="top" secondItem="RtW-Vj-EI3" secondAttribute="top" id="rjL-l0-BUJ"/>
                             <constraint firstItem="tVV-hb-FvP" firstAttribute="centerY" secondItem="oXn-pF-Otc" secondAttribute="centerY" id="vhz-kb-L7y"/>
+                            <constraint firstItem="RtW-Vj-EI3" firstAttribute="bottom" secondItem="63f-P7-hfN" secondAttribute="bottom" id="wuC-9p-fSu"/>
+                            <constraint firstItem="Q48-A7-dTt" firstAttribute="leading" secondItem="RtW-Vj-EI3" secondAttribute="leading" id="zKy-jK-83w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RtW-Vj-EI3"/>
                     </view>
@@ -542,7 +582,7 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DmL-uf-O0c"/>
+        <segue reference="lbK-E5-Zve"/>
         <segue reference="nH7-a3-2Ga"/>
     </inferredMetricsTieBreakers>
 </document>
