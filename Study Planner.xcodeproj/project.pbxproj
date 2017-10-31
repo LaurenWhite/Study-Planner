@@ -19,6 +19,8 @@
 		4E952E981F948A9E00913F36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E952E971F948A9E00913F36 /* Assets.xcassets */; };
 		4E952E9B1F948A9E00913F36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E952E991F948A9E00913F36 /* LaunchScreen.storyboard */; };
 		4E952EA61F948A9E00913F36 /* Study_PlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E952EA51F948A9E00913F36 /* Study_PlannerTests.swift */; };
+		4EEA8AF21FA8382C007E37DD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA8AF11FA8382C007E37DD /* SettingsViewController.swift */; };
+		4EEA8AF61FA83976007E37DD /* SchoolClassDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA8AF51FA83976007E37DD /* SchoolClassDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		4E952EA11F948A9E00913F36 /* Study PlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Study PlannerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E952EA51F948A9E00913F36 /* Study_PlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_PlannerTests.swift; sourceTree = "<group>"; };
 		4E952EA71F948A9E00913F36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EEA8AF11FA8382C007E37DD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		4EEA8AF51FA83976007E37DD /* SchoolClassDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolClassDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,16 +94,14 @@
 			isa = PBXGroup;
 			children = (
 				4E952E8E1F948A9E00913F36 /* AppDelegate.swift */,
-				4E952E901F948A9E00913F36 /* FirstViewController.swift */,
-				4E3CC4841F96D9AD00B44A81 /* Task.swift */,
-				4E3CC4821F96D6F400B44A81 /* TaskDatabase.swift */,
-				4E7CCF8C1F994EB500325579 /* TaskEditorViewController.swift */,
-				4E7CCF8A1F987FB200325579 /* TaskDetalisViewController.swift */,
-				4E7CCF8E1F9AD56B00325579 /* CountdownViewController.swift */,
+				4EEA8AF91FA839CD007E37DD /* First Tab */,
+				4EEA8AF71FA8398D007E37DD /* Task */,
 				4E952E941F948A9E00913F36 /* Main.storyboard */,
 				4E952E971F948A9E00913F36 /* Assets.xcassets */,
 				4E952E921F948A9E00913F36 /* SecondViewController.swift */,
+				4EEA8AF11FA8382C007E37DD /* SettingsViewController.swift */,
 				4E952E9C1F948A9E00913F36 /* Info.plist */,
+				4EEA8AF51FA83976007E37DD /* SchoolClassDatabase.swift */,
 				4E952E991F948A9E00913F36 /* LaunchScreen.storyboard */,
 			);
 			path = "Study Planner";
@@ -112,6 +114,26 @@
 				4E952EA71F948A9E00913F36 /* Info.plist */,
 			);
 			path = "Study PlannerTests";
+			sourceTree = "<group>";
+		};
+		4EEA8AF71FA8398D007E37DD /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				4E3CC4841F96D9AD00B44A81 /* Task.swift */,
+				4E3CC4821F96D6F400B44A81 /* TaskDatabase.swift */,
+			);
+			name = Task;
+			sourceTree = "<group>";
+		};
+		4EEA8AF91FA839CD007E37DD /* First Tab */ = {
+			isa = PBXGroup;
+			children = (
+				4E952E901F948A9E00913F36 /* FirstViewController.swift */,
+				4E7CCF8C1F994EB500325579 /* TaskEditorViewController.swift */,
+				4E7CCF8A1F987FB200325579 /* TaskDetalisViewController.swift */,
+				4E7CCF8E1F9AD56B00325579 /* CountdownViewController.swift */,
+			);
+			name = "First Tab";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,11 +242,13 @@
 				4E7CCF8F1F9AD56B00325579 /* CountdownViewController.swift in Sources */,
 				4E952E931F948A9E00913F36 /* SecondViewController.swift in Sources */,
 				4E3CC4831F96D6F400B44A81 /* TaskDatabase.swift in Sources */,
+				4EEA8AF61FA83976007E37DD /* SchoolClassDatabase.swift in Sources */,
 				4E7CCF8D1F994EB500325579 /* TaskEditorViewController.swift in Sources */,
 				4E7CCF8B1F987FB200325579 /* TaskDetalisViewController.swift in Sources */,
 				4E3CC4851F96D9AD00B44A81 /* Task.swift in Sources */,
 				4E952E8F1F948A9E00913F36 /* AppDelegate.swift in Sources */,
 				4E952E911F948A9E00913F36 /* FirstViewController.swift in Sources */,
+				4EEA8AF21FA8382C007E37DD /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
