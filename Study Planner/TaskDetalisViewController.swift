@@ -11,7 +11,6 @@ import UIKit
 class TaskDetalisViewController: UIViewController {
 
     var task: Task?
-    //var sendExistingTask: ((Task)->Void)?
     
     //UI PROPERTIES
     @IBOutlet weak var taskDetailsTitleLabel: UILabel!
@@ -41,11 +40,6 @@ class TaskDetalisViewController: UIViewController {
     
     //User pressed the edit button on the Task Details Page
     @IBAction func editTaskButtonPressed(_ sender: UIBarButtonItem) {
-        // HOW CAN YOU PASS THE CURRENT TASK TO THE TASK EDITOR FROM HERE?
-        //self.sendExistingTask?(task!) //<- did not work :(
-        let existingTask = self.task
-        let TaskEditorVC = TaskEditorViewController()
-        TaskEditorVC.task = existingTask
         self.performSegue(withIdentifier: "EditTask", sender: nil)
     }
     

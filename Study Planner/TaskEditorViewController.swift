@@ -15,6 +15,9 @@ class TaskEditorViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField! //Round Text Field for Task Name
     @IBOutlet weak var dueDatePicker: UIDatePicker!  //Due Date Picker
+    @IBOutlet weak var naviTitle: UINavigationItem!     //Navigation Title Label
+    @IBOutlet weak var rightButton: UIBarButtonItem!    //Navigation Right Button (Add/Save)
+    
     
     
     //User clicked "Add" button on the Task Editor Page
@@ -40,21 +43,25 @@ class TaskEditorViewController: UIViewController {
         super.viewDidLoad()
         
         if let task = self.task {
+            configureUI(newtask: false)
             self.title = task.taskTitle
             nameTextField.text = task.taskTitle
             dueDatePicker.date = task.dueDate
         }else{
+            configureUI(newtask: true)
             nameTextField.text = ""
         }
     }
     
-    private func editExistingTask(task: Task){
-        if let task = self.task {
-            self.title = task.taskTitle
-            nameTextField.text = task.taskTitle
-            dueDatePicker.date = task.dueDate
+    func configureUI(newtask: Bool){
+        if(newtask){
+            naviTitle.title = "Create New Task"
+            rightButton.title = "Add"
+        }else{
+            naviTitle.title = "Edit Task"
+            rightButton.title = "Save"
         }
-            
-    }
+
+}
 
 }

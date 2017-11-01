@@ -515,6 +515,8 @@
                     <connections>
                         <outlet property="dueDatePicker" destination="FGc-ez-40d" id="5JN-Yi-X6S"/>
                         <outlet property="nameTextField" destination="yAu-AS-iId" id="o7L-PT-IJm"/>
+                        <outlet property="naviTitle" destination="HUA-CL-eYv" id="rOR-3I-YG7"/>
+                        <outlet property="rightButton" destination="jku-eW-fd1" id="W6d-lV-anh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caW-BM-PuE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -700,7 +702,7 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DmL-uf-O0c"/>
+        <segue reference="rhf-Ks-oKa"/>
         <segue reference="nH7-a3-2Ga"/>
     </inferredMetricsTieBreakers>
 </document>

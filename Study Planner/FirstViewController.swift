@@ -81,8 +81,10 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let currentDay = calendar.component(.day, from: Date())
         let dueDateDay = calendar.component(.day, from: givenDueDate)
         var formattedDueDate: String = ""
+        let daysBetween = calendar.dateComponents([.day], from: Date(), to: givenDueDate).day!
         
-        if (currentMonth == dueDateMonth){
+        
+        if (daysBetween <= 7){
             let daysUntilDue = dueDateDay - currentDay
             let dayOfWeek = calendar.component(.weekday, from: givenDueDate)
             let weekdays = ["Sun","Mon","Tues","Wed","Thurs","Fri","Sat"]
