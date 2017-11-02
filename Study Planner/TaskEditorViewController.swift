@@ -24,8 +24,8 @@ class TaskEditorViewController: UIViewController {
         if let task = self.task {
             task.taskTitle = newTitle
             task.dueDate = newDueDate
-            task.completion = false
-            self.saveNotification?(task)
+            TaskDatabase().updateExisting(task: task)
+            print("The task has been edited and update notification should have run")
         } else {
             let newTask = Task(taskTitle: newTitle, completion: false, dueDate: newDueDate)
             self.saveNotification?(newTask)
@@ -46,15 +46,6 @@ class TaskEditorViewController: UIViewController {
         }else{
             nameTextField.text = ""
         }
-    }
-    
-    private func editExistingTask(task: Task){
-        if let task = self.task {
-            self.title = task.taskTitle
-            nameTextField.text = task.taskTitle
-            dueDatePicker.date = task.dueDate
-        }
-            
     }
 
 }
