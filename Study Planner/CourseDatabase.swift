@@ -30,8 +30,4 @@ class CourseDatabase{
     func addCourse(course: Course){
         courses.append(course)
     }
-    
-    func tester(){
-        
-    }
 }
