@@ -8,7 +8,7 @@
 
 import Foundation
 
-var courses: [Course] = []//change later for persistence
+private var courses: [Course] = []//change later for persistence
 
 class Course{
     var courseTitle: String
@@ -29,5 +29,9 @@ class CourseDatabase{
     
     func addCourse(course: Course){
         courses.append(course)
+    }
+    
+    func tester(){
+        
     }
 }

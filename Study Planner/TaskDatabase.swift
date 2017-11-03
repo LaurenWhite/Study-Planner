@@ -45,14 +45,14 @@ class TaskDatabase {
     }
     
     func saveTasks(tasks: [Task]) {
-        var data: [[String:Any]] = [] // 1
+        var data: [[String:Any]] = []
         //print("TITLES OF TASKS BEING SAVED:")     //print statement for tracking data persistence
         for task in tasks {
             //print(task.taskTitle)     //print statement for tracking data persistence
-            let taskData: [String:Any] = ["taskTitle" : task.taskTitle, "completion" : task.completion, "dueDate" : task.dueDate] // 2
+            let taskData: [String:Any] = ["taskTitle" : task.taskTitle, "completion" : task.completion, "dueDate" : task.dueDate]
             data.append(taskData)
         }
-        UserDefaults.standard.set(data, forKey: taskKey) // 3
+        UserDefaults.standard.set(data, forKey: taskKey)
     }
     
     func loadSavedTasks() -> [Task] {

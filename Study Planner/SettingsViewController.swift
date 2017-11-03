@@ -10,6 +10,8 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    let courseDatabase = CourseDatabase()
+    
     @IBOutlet weak var classNameTextField: UITextField!
     
     @IBAction func classNameEntered(_ sender: Any) {

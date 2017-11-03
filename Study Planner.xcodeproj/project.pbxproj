@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E2928371FAC0589002D2E15 /* CourseDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2928361FAC0589002D2E15 /* CourseDatabase.swift */; };
 		4E3CC4831F96D6F400B44A81 /* TaskDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3CC4821F96D6F400B44A81 /* TaskDatabase.swift */; };
 		4E3CC4851F96D9AD00B44A81 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3CC4841F96D9AD00B44A81 /* Task.swift */; };
 		4E7CCF8B1F987FB200325579 /* TaskDetalisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7CCF8A1F987FB200325579 /* TaskDetalisViewController.swift */; };
@@ -20,7 +21,6 @@
 		4E952E9B1F948A9E00913F36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E952E991F948A9E00913F36 /* LaunchScreen.storyboard */; };
 		4E952EA61F948A9E00913F36 /* Study_PlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E952EA51F948A9E00913F36 /* Study_PlannerTests.swift */; };
 		4EEA8AF21FA8382C007E37DD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA8AF11FA8382C007E37DD /* SettingsViewController.swift */; };
-		4EEA8AF61FA83976007E37DD /* SchoolClassDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA8AF51FA83976007E37DD /* SchoolClassDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E2928361FAC0589002D2E15 /* CourseDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDatabase.swift; sourceTree = "<group>"; };
 		4E3CC4821F96D6F400B44A81 /* TaskDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDatabase.swift; sourceTree = "<group>"; };
 		4E3CC4841F96D9AD00B44A81 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		4E7CCF8A1F987FB200325579 /* TaskDetalisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetalisViewController.swift; sourceTree = "<group>"; };
@@ -51,7 +52,6 @@
 		4E952EA51F948A9E00913F36 /* Study_PlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_PlannerTests.swift; sourceTree = "<group>"; };
 		4E952EA71F948A9E00913F36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EEA8AF11FA8382C007E37DD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		4EEA8AF51FA83976007E37DD /* SchoolClassDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolClassDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +100,8 @@
 				4E952E971F948A9E00913F36 /* Assets.xcassets */,
 				4E952E921F948A9E00913F36 /* SecondViewController.swift */,
 				4EEA8AF11FA8382C007E37DD /* SettingsViewController.swift */,
+				4E2928361FAC0589002D2E15 /* CourseDatabase.swift */,
 				4E952E9C1F948A9E00913F36 /* Info.plist */,
-				4EEA8AF51FA83976007E37DD /* SchoolClassDatabase.swift */,
 				4E952E991F948A9E00913F36 /* LaunchScreen.storyboard */,
 			);
 			path = "Study Planner";
@@ -239,10 +239,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E2928371FAC0589002D2E15 /* CourseDatabase.swift in Sources */,
 				4E7CCF8F1F9AD56B00325579 /* CountdownViewController.swift in Sources */,
 				4E952E931F948A9E00913F36 /* SecondViewController.swift in Sources */,
 				4E3CC4831F96D6F400B44A81 /* TaskDatabase.swift in Sources */,
-				4EEA8AF61FA83976007E37DD /* SchoolClassDatabase.swift in Sources */,
 				4E7CCF8D1F994EB500325579 /* TaskEditorViewController.swift in Sources */,
 				4E7CCF8B1F987FB200325579 /* TaskDetalisViewController.swift in Sources */,
 				4E3CC4851F96D9AD00B44A81 /* Task.swift in Sources */,
