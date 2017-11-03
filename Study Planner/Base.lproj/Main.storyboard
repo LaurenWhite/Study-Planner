@@ -85,14 +85,12 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="38" id="v2c-Fi-lkF"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="TmJ-X3-B1E" appends="YES" id="Oph-6t-ToO"/>
-                                        </connections>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YQG-hY-x2s">
                                         <rect key="frame" x="0.0" y="88" width="375" height="465"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" red="0.90613797470432722" green="0.88987504690670938" blue="0.92667354060913709" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <gestureRecognizers/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="task" textLabel="2qk-Qr-Ndd" detailTextLabel="dMG-pp-e9c" style="IBUITableViewCellStyleValue1" id="Bz6-aP-bEu">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -102,20 +100,22 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2qk-Qr-Ndd">
-                                                            <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
+                                                            <rect key="frame" x="15" y="12" width="33" height="20"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dMG-pp-e9c">
-                                                            <rect key="frame" x="296" y="12" width="44" height="20.5"/>
+                                                            <rect key="frame" x="296" y="12" width="44" height="20"/>
                                                             <autoresizingMask key="autoresizingMask"/>
+                                                            <gestureRecognizers/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <gestureRecognizers/>
                                                 </tableViewCellContentView>
                                                 <connections>
                                                     <segue destination="U40-nw-rup" kind="show" id="a23-V8-n0L"/>
@@ -124,6 +124,7 @@
                                         </prototypes>
                                     </tableView>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="YQG-hY-x2s" firstAttribute="trailing" secondItem="KG5-77-mgV" secondAttribute="trailingMargin" id="c3g-YS-eVL"/>
                                     <constraint firstItem="YQG-hY-x2s" firstAttribute="leading" secondItem="KG5-77-mgV" secondAttribute="leadingMargin" id="fug-mT-Owl"/>
@@ -149,11 +150,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="TmJ-X3-B1E">
-                    <connections>
-                        <action selector="deleteTask:" destination="9pv-A4-QxB" id="3Wd-ai-YYF"/>
-                    </connections>
-                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="750" y="-835"/>
         </scene>

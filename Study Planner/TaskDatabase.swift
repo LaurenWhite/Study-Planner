@@ -35,6 +35,11 @@ class TaskDatabase {
         reorder()
     }
     
+    func removeTask(int: Int){
+        tasks.remove(at: int)
+        reorder()
+    }
+    
     private func reorder(){
         tasks.sort(by: { $0.dueDate < $1.dueDate })
         saveTasks(tasks: tasks)
