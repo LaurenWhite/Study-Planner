@@ -9,7 +9,7 @@
 import UIKit
 
 class TaskDetalisViewController: UIViewController {
-
+    
     var task: Task?
     
     //UI PROPERTIES
@@ -21,7 +21,7 @@ class TaskDetalisViewController: UIViewController {
         super.viewDidLoad()
         configureUI()
     }
-
+    
     func configureUI() {
         if let task = self.task {
             self.title = task.taskTitle
@@ -62,3 +62,4 @@ class TaskDetalisViewController: UIViewController {
     }
     
 }
+
