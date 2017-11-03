@@ -47,6 +47,30 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
+    @IBAction func deleteTask(_ sender: Any) {
+        //if longGestureRecognizer.state != .ended{
+          //  return
+        //}
+        
+        let verifyAlert = UIAlertController(title: "Delete this task?", message: nil, preferredStyle: .alert)
+        let deleteAction = UIAlertAction(title: "Delete", style: .default, handler: nil )
+        verifyAlert.addAction(deleteAction)
+        
+        self.present(verifyAlert, animated: true, completion: nil)
+    
+    }
+    /*@objc func deleteTask(longGestureRecognizer: UILongPressGestureRecognizer){
+        if longGestureRecognizer.state != .ended{
+            return
+        }
+        
+        let verifyAlert = UIAlertController(title: "Delete this task?", message: nil, preferredStyle: .alert)
+        let deleteAction = UIAlertAction(title: "Delete", style: .default, handler: nil )
+        verifyAlert.addAction(deleteAction)
+        
+        self.present(verifyAlert, animated: true, completion: nil)
+     }*/
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let taskVC = segue.destination as? TaskDetalisViewController {
             // Show existing task

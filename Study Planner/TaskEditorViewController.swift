@@ -28,7 +28,6 @@ class TaskEditorViewController: UIViewController {
             task.taskTitle = newTitle
             task.dueDate = newDueDate
             TaskDatabase().updateExisting(task: task)
-            print("The task has been edited and update notification should have run")
         } else {
             let newTask = Task(taskTitle: newTitle, completion: false, dueDate: newDueDate)
             self.saveNotification?(newTask)
