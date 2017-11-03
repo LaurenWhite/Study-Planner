@@ -29,13 +29,19 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for label in courseListOfLabels{
+            if (index(ofAccessibilityElement: label) > courseDatabase.countCourses()-1){
+                label.text = ""
+            }
+        }
         self.courseNameTextField.delegate = self
         // Do any additional setup after loading the view.
     }
     
     func addCourseToLabel(labelTitle: String){
         let index = (courseDatabase.countCourses())-1
-        courseListOfLabels[index].text = labelTitle
+        courseListOfLabels[index].text = "\(index+1). \(labelTitle)"
         
     }
 
