@@ -97,12 +97,12 @@
 				4EEA8AF91FA839CD007E37DD /* First Tab */,
 				4EEA8AF71FA8398D007E37DD /* Task */,
 				4E952E941F948A9E00913F36 /* Main.storyboard */,
-				4E952E971F948A9E00913F36 /* Assets.xcassets */,
 				4E952E921F948A9E00913F36 /* SecondViewController.swift */,
 				4EEA8AF11FA8382C007E37DD /* SettingsViewController.swift */,
 				4E2928361FAC0589002D2E15 /* CourseDatabase.swift */,
-				4E952E9C1F948A9E00913F36 /* Info.plist */,
 				4E952E991F948A9E00913F36 /* LaunchScreen.storyboard */,
+				4E952E971F948A9E00913F36 /* Assets.xcassets */,
+				4E952E9C1F948A9E00913F36 /* Info.plist */,
 			);
 			path = "Study Planner";
 			sourceTree = "<group>";

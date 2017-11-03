@@ -568,7 +568,7 @@
         <!--Settings-->
         <scene sceneID="JQR-6m-VGy">
             <objects>
-                <viewController id="4sl-e1-2TY" sceneMemberID="viewController">
+                <viewController id="4sl-e1-2TY" customClass="SettingsViewController" customModule="Study_Planner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iLL-kz-mDL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -613,6 +613,7 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="go"/>
                                         <connections>
                                             <action selector="classNameEntered:" destination="fDn-bN-zJX" eventType="editingDidEnd" id="bp8-Fk-v3v"/>
+                                            <action selector="returnPressed:" destination="4sl-e1-2TY" eventType="primaryActionTriggered" id="gbu-fb-lVa"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -676,6 +677,15 @@
                         <viewLayoutGuide key="safeArea" id="7a8-l2-9ZF"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="icons8-contacts" id="XS5-M2-sgd"/>
+                    <connections>
+                        <outlet property="courseNameTextField" destination="qoC-A2-9nI" id="xpQ-2u-YNA"/>
+                        <outletCollection property="courseListOfLabels" destination="XYo-Ig-Uvf" collectionClass="NSMutableArray" id="7y2-tz-HCO"/>
+                        <outletCollection property="courseListOfLabels" destination="w4f-V3-c1n" collectionClass="NSMutableArray" id="nZi-fK-osq"/>
+                        <outletCollection property="courseListOfLabels" destination="ayx-VQ-npo" collectionClass="NSMutableArray" id="f9M-JL-PCQ"/>
+                        <outletCollection property="courseListOfLabels" destination="XbC-iD-PiK" collectionClass="NSMutableArray" id="CcW-d2-0pW"/>
+                        <outletCollection property="courseListOfLabels" destination="F00-QY-ByG" collectionClass="NSMutableArray" id="A3b-gd-NY8"/>
+                        <outletCollection property="courseListOfLabels" destination="NLu-6K-wtA" collectionClass="NSMutableArray" id="alZ-Lk-uBd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ylm-78-4t3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="fDn-bN-zJX" userLabel="Exit" sceneMemberID="exit"/>

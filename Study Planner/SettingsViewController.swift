@@ -8,36 +8,35 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, UITextFieldDelegate {
 
     let courseDatabase = CourseDatabase()
     
-    @IBOutlet weak var classNameTextField: UITextField!
     
-    @IBAction func classNameEntered(_ sender: Any) {
-        
+    @IBOutlet weak var courseNameTextField: UITextField!
+    
+    @IBOutlet var courseListOfLabels: [UILabel]!
+    
+    @IBAction func returnPressed(_ sender: UITextField) {
+        if let newCourseTitle = courseNameTextField.text{
+            let newCourseEvents: [String] = []
+            let newCourse = Course(courseTitle: newCourseTitle, events: newCourseEvents)
+            courseDatabase.addCourse(course: newCourse)
+            addCourseToLabel(labelTitle: newCourse.courseTitle)
+        }
+        courseNameTextField.text = ""
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.courseNameTextField.delegate = self
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func addCourseToLabel(labelTitle: String){
+        let index = (courseDatabase.countCourses())-1
+        courseListOfLabels[index].text = labelTitle
+        
     }
-    */
 
 }
