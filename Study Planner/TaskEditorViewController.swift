@@ -19,25 +19,6 @@ class TaskEditorViewController: UIViewController {
     @IBOutlet weak var rightButton: UIBarButtonItem!    //Navigation Right Button (Add/Save)
     
     
-    
-    //User clicked "Add" button on the Task Editor Page
-    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        let newTitle = self.nameTextField.text ?? "New Task"
-        let newDueDate = dueDatePicker.date
-        if let task = self.task {
-            task.taskTitle = newTitle
-            task.dueDate = newDueDate
-            TaskDatabase().updateExisting(task: task)
-        } else {
-            let newTask = Task(taskTitle: newTitle, completion: false, dueDate: newDueDate)
-            self.saveNotification?(newTask)
-        }
-        
-        // Go back to the list of notes
-        self.performSegue(withIdentifier: "TaskAdded", sender: nil)
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,6 +42,23 @@ class TaskEditorViewController: UIViewController {
             rightButton.title = "Save"
         }
 
-}
+    }
 
+    
+    //User clicked "Add" button on the Task Editor Page
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        let newTitle = self.nameTextField.text ?? "New Task"
+        let newDueDate = dueDatePicker.date
+        if let task = self.task {
+            task.taskTitle = newTitle
+            task.dueDate = newDueDate
+            TaskDatabase().updateExisting(task: task)
+        } else {
+            let newTask = Task(taskTitle: newTitle, completion: false, dueDate: newDueDate)
+            self.saveNotification?(newTask)
+        }
+        
+        // Go back to the list of notes
+        self.performSegue(withIdentifier: "TaskAdded", sender: nil)
+    }
 }

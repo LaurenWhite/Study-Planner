@@ -25,7 +25,6 @@ class TaskDatabase {
     
     //Saves the note to the database
     func saveNew(task: Task){
-        print("save new called")
         tasks.append(task)
         reorder()
     }
