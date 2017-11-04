@@ -19,12 +19,23 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for label in courseListOfLabels{
-            if (index(ofAccessibilityElement: label) > courseDatabase.countCourses()-1){
-                label.text = ""
-            }
-        }
+        showCourseList()
+        
         self.courseNameTextField.delegate = self
+    }
+    
+    //Shows the saved courses in the label collection
+    func showCourseList(){
+        var labelIndex = 0
+        for label in courseListOfLabels{
+            if (labelIndex > courseDatabase.countCourses()-1){
+                label.text = ""
+            }else{
+                let labelTitle = courseDatabase.currentCourse(atIndex: labelIndex).courseTitle
+                label.text = "\(labelIndex+1). \(labelTitle)"
+            }
+            labelIndex += 1
+        }
     }
     
     //User touched Return on the keyboard in the Course Name Text Field
