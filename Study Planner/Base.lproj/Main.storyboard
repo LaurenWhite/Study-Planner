@@ -500,15 +500,41 @@
                                     <constraint firstAttribute="height" constant="130" id="gvy-56-sia"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="zZh-C9-ioD" userLabel="Course SV">
+                                <rect key="frame" x="30" y="313" width="330" height="143.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brN-fF-cz4">
+                                        <rect key="frame" x="0.0" y="0.0" width="64.5" height="23.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Course">
+                                                <attributes>
+                                                    <font key="NSFont" size="20" name="ArialUnicodeMS"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYB-x6-dsK">
+                                        <rect key="frame" x="0.0" y="23.5" width="320" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="Q4h-WA-e9j"/>
+                                        </constraints>
+                                    </pickerView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="O3a-in-aBj" secondAttribute="trailing" constant="10" id="303-Va-QVe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Wk0-mX-TyQ" secondAttribute="trailing" constant="10" id="ABU-rY-egr"/>
                             <constraint firstItem="O3a-in-aBj" firstAttribute="top" secondItem="UfB-K1-YCB" secondAttribute="bottom" constant="15" id="JBR-fi-zZR"/>
+                            <constraint firstItem="zZh-C9-ioD" firstAttribute="top" secondItem="Wk0-mX-TyQ" secondAttribute="bottom" constant="10" id="Kz4-N1-iRH"/>
+                            <constraint firstItem="zZh-C9-ioD" firstAttribute="leading" secondItem="fFe-yb-wrY" secondAttribute="leading" constant="30" id="Qmh-tq-59d"/>
                             <constraint firstItem="UfB-K1-YCB" firstAttribute="top" secondItem="fFe-yb-wrY" secondAttribute="top" id="VO9-19-n9J"/>
                             <constraint firstItem="Wk0-mX-TyQ" firstAttribute="top" secondItem="O3a-in-aBj" secondAttribute="bottom" constant="30" id="fWB-km-fWm"/>
                             <constraint firstItem="O3a-in-aBj" firstAttribute="leading" secondItem="TsS-8B-vkR" secondAttribute="leadingMargin" constant="10" id="lBF-gU-J00"/>
+                            <constraint firstItem="fFe-yb-wrY" firstAttribute="trailing" secondItem="zZh-C9-ioD" secondAttribute="trailing" constant="15" id="oTJ-C3-y0k"/>
                             <constraint firstItem="Wk0-mX-TyQ" firstAttribute="leading" secondItem="TsS-8B-vkR" secondAttribute="leadingMargin" constant="10" id="qrt-Cb-UWV"/>
                             <constraint firstItem="UfB-K1-YCB" firstAttribute="leading" secondItem="fFe-yb-wrY" secondAttribute="leading" id="rHd-qB-HfJ"/>
                             <constraint firstItem="UfB-K1-YCB" firstAttribute="trailing" secondItem="fFe-yb-wrY" secondAttribute="trailing" id="rJB-2m-EjP"/>
@@ -518,6 +544,7 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="coursePicker" destination="NYB-x6-dsK" id="h8N-IZ-uqL"/>
                         <outlet property="dueDatePicker" destination="FGc-ez-40d" id="5JN-Yi-X6S"/>
                         <outlet property="nameTextField" destination="yAu-AS-iId" id="o7L-PT-IJm"/>
                         <outlet property="naviTitle" destination="HUA-CL-eYv" id="rOR-3I-YG7"/>

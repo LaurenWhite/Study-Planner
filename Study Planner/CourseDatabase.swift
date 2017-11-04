@@ -22,12 +22,25 @@ class Course{
 
 class CourseDatabase{
     
+    
+    /*init(){
+        let unSpecEvents: [String] = []
+        let unspecifiedCourse = Course(courseTitle: "Unspecified", events: unSpecEvents)
+        courses = []//change later for persistence
+    }*/
+    
     //Returns: The number of notes in the database
     func countCourses() -> Int {
         return courses.count
     }
     
+    //Adds the course given in parameters to array
     func addCourse(course: Course){
         courses.append(course)
+    }
+    
+    //Returns the course at the given index
+    func currentCourse(atIndex index: Int) -> Course {
+        return courses[index]
     }
 }
