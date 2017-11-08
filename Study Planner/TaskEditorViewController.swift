@@ -70,9 +70,10 @@ class TaskEditorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         if let task = self.task {
             task.taskTitle = newTitle
             task.dueDate = newDueDate
+            
             TaskDatabase().updateExisting(task: task)
         } else {
-            let newTask = Task(taskTitle: newTitle, completion: false, dueDate: newDueDate)
+            let newTask = Task(taskTitle: newTitle, completion: false, dueDate: newDueDate, courseClassification: courseDatabase.currentCourse(atIndex: 0))
             self.saveNotification?(newTask)
         }
         // Go back to the list of notes

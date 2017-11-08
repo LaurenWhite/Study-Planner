@@ -49,7 +49,7 @@ class TaskDatabase {
         //print("TITLES OF TASKS BEING SAVED:")     //print statement for tracking data persistence
         for task in tasks {
             //print(task.taskTitle)     //print statement for tracking data persistence
-            let taskData: [String:Any] = ["taskTitle" : task.taskTitle, "completion" : task.completion, "dueDate" : task.dueDate]
+            let taskData: [String:Any] = ["taskTitle" : task.taskTitle, "completion" : task.completion, "dueDate" : task.dueDate, "courseClassification" : task.courseClassification]
             data.append(taskData)
         }
         UserDefaults.standard.set(data, forKey: taskKey)
@@ -62,8 +62,9 @@ class TaskDatabase {
         for taskData in savedData {
             if let taskTitle = taskData["taskTitle"] as? String,
                 let completion = taskData["completion"] as? Bool,
-                let dueDate = taskData["dueDate"] as? Date {
-                array.append(Task(taskTitle: taskTitle, completion: completion, dueDate: dueDate))
+                let dueDate = taskData["dueDate"] as? Date,
+                let courseClassification = taskData["courseClassification"] as? Course {
+                array.append(Task(taskTitle: taskTitle, completion: completion, dueDate: dueDate, courseClassification: courseClassification))
                 //print(array[i].taskTitle); i+= 1      //print statement for tracking data persistence
             }
         }
