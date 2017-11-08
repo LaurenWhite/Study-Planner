@@ -31,8 +31,10 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
             if (labelIndex > courseDatabase.countCourses()-1){
                 label.text = ""
             }else{
-                let labelTitle = courseDatabase.currentCourse(atIndex: labelIndex).courseTitle
-                label.text = "\(labelIndex+1). \(labelTitle)"
+                let labelTitle = courseDatabase.currentCourse(atIndex: labelIndex+1).courseTitle
+                if (labelTitle != "None"){
+                    label.text = "\(labelIndex+1). \(labelTitle)"
+                }
             }
             labelIndex += 1
         }

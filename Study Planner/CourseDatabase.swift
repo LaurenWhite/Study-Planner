@@ -10,6 +10,8 @@ import Foundation
 
 private var courses: [Course] = CourseDatabase().loadSavedCourses()
 let courseKey = "courses.key"
+let genericEvents: [String] = []
+let unSpecifiedCourse = Course(courseTitle: "None", events: genericEvents)
 
 class Course{
     var courseTitle: String
@@ -21,15 +23,16 @@ class Course{
     }
 }
 
+
+
 class CourseDatabase{
-    
-    
-    /*init(){
-        let unSpecEvents: [String] = []
-        let unspecifiedCourse = Course(courseTitle: "Unspecified", events: unSpecEvents)
-        courses = []//change later for persistence
-    }*/
-    
+
+    //init(){
+      //if(countCourses() == 0){
+        //  courses.append(unSpecifiedCourse)
+        //}
+    //}
+
     //Returns: The number of notes in the database
     func countCourses() -> Int {
         return courses.count
@@ -59,7 +62,7 @@ class CourseDatabase{
     
     func loadSavedCourses() -> [Course] {
         let savedData = UserDefaults.standard.array(forKey: courseKey) as? [[String:AnyObject]] ?? []
-        var array: [Course] = []
+        var array: [Course] = [unSpecifiedCourse]
         //var i = 0; print("TITLES OF COURSES BEING LOADED FROM PAST DATA:")     //print statement for tracking data persistence
         for courseData in savedData {
             if let courseTitle = courseData["courseTitle"] as? String,
@@ -70,4 +73,5 @@ class CourseDatabase{
         }
         return array
     }
+    
 }
