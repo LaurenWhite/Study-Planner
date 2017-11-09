@@ -18,7 +18,7 @@ class Task {
         self.taskTitle = taskTitle
         self.completion = false
         self.dueDate = dueDate
-        self.courseClassification = CourseDatabase().currentCourse(atIndex: 0)
+        self.courseClassification = courseClassification
     }
     
 }

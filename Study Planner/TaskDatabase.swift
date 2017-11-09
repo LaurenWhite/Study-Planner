@@ -49,21 +49,22 @@ class TaskDatabase {
         //print("TITLES OF TASKS BEING SAVED:")     //print statement for tracking data persistence
         for task in tasks {
             //print(task.taskTitle)     //print statement for tracking data persistence
-            let taskData: [String:Any] = ["taskTitle" : task.taskTitle, "completion" : task.completion, "dueDate" : task.dueDate, "courseClassification" : task.courseClassification]
+            let taskData: [String:Any] = ["taskTitle" : task.taskTitle, "completion" : task.completion, "dueDate" : task.dueDate, "courseClassification" : task.courseClassification.courseTitle]
             data.append(taskData)
         }
         UserDefaults.standard.set(data, forKey: taskKey)
     }
     
     func loadSavedTasks() -> [Task] {
-        let savedData = UserDefaults.standard.array(forKey: taskKey) as? [[String:AnyObject]] ?? []
+        let savedData = UserDefaults.standard.array(forKey: taskKey) as? [[String:Any]] ?? []
         var array: [Task] = []
         //var i = 0; print("TITLES OF TASKS BEING LOADED FROM PAST DATA:")     //print statement for tracking data persistence
         for taskData in savedData {
             if let taskTitle = taskData["taskTitle"] as? String,
                 let completion = taskData["completion"] as? Bool,
                 let dueDate = taskData["dueDate"] as? Date,
-                let courseClassification = taskData["courseClassification"] as? Course {
+                let courseClassificationTitle = taskData["courseClassification"] as? String {
+                let courseClassification = CourseDatabase().currentCourse(atIndex: CourseDatabase().courseIndexOf(title: courseClassificationTitle))
                 array.append(Task(taskTitle: taskTitle, completion: completion, dueDate: dueDate, courseClassification: courseClassification))
                 //print(array[i].taskTitle); i+= 1      //print statement for tracking data persistence
             }

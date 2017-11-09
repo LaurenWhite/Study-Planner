@@ -49,6 +49,15 @@ class CourseDatabase{
         return courses[index]
     }
     
+    //Returns the index of a course based on the title
+    func courseIndexOf(title: String) -> Int {
+        if let i = courses.index(where: { $0.courseTitle == title}){
+            return i
+        }else{
+            return  0
+        }
+    }
+    
     func saveCourses(courses: [Course]) {
         var data: [[String:Any]] = []
         //print("TITLES OF TASKS BEING SAVED:")     //print statement for tracking data persistence
