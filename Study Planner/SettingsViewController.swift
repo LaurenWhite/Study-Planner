@@ -65,7 +65,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     }
     
     //Checks if the entered title is not solely whitespaces
-    private func isValidName(enteredName: String) -> Bool{
+    func isValidName(enteredName: String) -> Bool{
         var valid = false
         let trimmedName = enteredName.trimmingCharacters(in: .whitespacesAndNewlines)
         if  !trimmedName.isEmpty{

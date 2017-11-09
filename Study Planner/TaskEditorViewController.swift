@@ -12,7 +12,7 @@ class TaskEditorViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     var task : Task?
     var saveNotification: ((Task) -> Void)?
-    let courseDatabase = CourseDatabase()
+    let courseDatabase = CourseDatabase(); let taskDatabase = TaskDatabase()
     
     @IBOutlet weak var nameTextField: UITextField! //Round Text Field for Task Name
     @IBOutlet weak var dueDatePicker: UIDatePicker!  //Due Date Picker
@@ -24,20 +24,20 @@ class TaskEditorViewController: UIViewController, UIPickerViewDelegate, UIPicker
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureDatePicker()
+        configureCoursePicker()
+        
         if let task = self.task {
             configureUI(newtask: false)
             self.title = task.taskTitle
             nameTextField.text = task.taskTitle
             dueDatePicker.date = task.dueDate
+            print(courseDatabase.courseIndexOf(title: task.courseClassification.courseTitle))
+            coursePicker.selectRow(courseDatabase.courseIndexOf(title: task.courseClassification.courseTitle), inComponent: 0, animated: true)
         }else{
             configureUI(newtask: true)
             nameTextField.text = ""
         }
-        
-        configureDatePicker()
-        
-        self.coursePicker.delegate = self
-        self.coursePicker.dataSource = self
     }
     
     //Changes right button to Add/Save & title depending on if the note is new or existing
@@ -63,9 +63,20 @@ class TaskEditorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         
     }
     
+    //Sets data source and delegate of picker to self
+    func configureCoursePicker(){
+        self.coursePicker.delegate = self
+        self.coursePicker.dataSource = self
+    }
+    
     //User clicked "Add" button on the Task Editor Page
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        let newTitle = self.nameTextField.text ?? "New Task"
+        var newTitle: String
+        if(SettingsViewController().isValidName(enteredName: self.nameTextField.text!)){
+            newTitle = self.nameTextField.text!
+        }else{
+            newTitle = "New Task"
+        }
         let newDueDate = dueDatePicker.date
         let newCourse = courseDatabase.currentCourse(atIndex: coursePicker.selectedRow(inComponent: 0))
         if let task = self.task {
