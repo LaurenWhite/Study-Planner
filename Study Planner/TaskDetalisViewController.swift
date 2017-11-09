@@ -16,6 +16,7 @@ class TaskDetalisViewController: UIViewController {
     @IBOutlet weak var taskDetailsTitleLabel: UILabel!
     @IBOutlet weak var dateDueLabel: UILabel!
     @IBOutlet weak var taskCompleteSwitch: UISwitch!
+    @IBOutlet weak var affiliatedCouresLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,7 @@ class TaskDetalisViewController: UIViewController {
         if let task = self.task {
             self.title = task.taskTitle
             taskDetailsTitleLabel.text = task.taskTitle
+            affiliatedCouresLabel.text = task.courseClassification.courseTitle
             taskCompleteSwitch.isOn = task.completion
         }
         

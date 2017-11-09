@@ -187,11 +187,11 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DP0-QY-r3I">
-                                <rect key="frame" x="20" y="84" width="329" height="37.5"/>
+                                <rect key="frame" x="20" y="84" width="329" height="29"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
-                                            <font key="NSFont" size="32" name="ArialRoundedMTBold"/>
+                                            <font key="NSFont" size="25" name="ArialRoundedMTBold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -210,47 +210,72 @@
                                 </items>
                                 <color key="barTintColor" red="0.002444905349161185" green="0.86104005514667725" blue="0.003793493258918449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q9q-xM-EVP" userLabel="Due Date Line SV">
-                                <rect key="frame" x="16" y="153" width="343" height="20.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DPN-Sq-X8Z" userLabel="Info SV">
+                                <rect key="frame" x="20" y="138" width="335" height="51"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bda-QP-JW3">
-                                        <rect key="frame" x="0.0" y="0.0" width="90" height="20.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="5KH-ca-qwB"/>
-                                        </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Due Date: ">
-                                                <attributes>
-                                                    <font key="NSFont" size="18" name="Arial-BoldMT"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prY-Ov-Jck">
-                                        <rect key="frame" x="90" y="0.0" width="253" height="20.5"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Label">
-                                                <attributes>
-                                                    <font key="NSFont" size="18" name="ArialMT"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q9q-xM-EVP" userLabel="Due Date Line SV">
+                                        <rect key="frame" x="0.0" y="0.0" width="134.5" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bda-QP-JW3">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="20.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="5KH-ca-qwB"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Due Date: ">
+                                                        <attributes>
+                                                            <font key="NSFont" size="18" name="Arial-BoldMT"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prY-Ov-Jck">
+                                                <rect key="frame" x="90" y="0.0" width="44.5" height="20.5"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Label">
+                                                        <attributes>
+                                                            <font key="NSFont" size="18" name="ArialMT"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KmC-GN-HNM" userLabel="Course Line SV">
+                                        <rect key="frame" x="0.0" y="30.5" width="116.5" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUt-4n-MLA">
+                                                <rect key="frame" x="0.0" y="0.0" width="72" height="20.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="72" id="LhC-da-0Lf"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Course: ">
+                                                        <attributes>
+                                                            <font key="NSFont" size="18" name="Arial-BoldMT"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbs-Ao-RGS" userLabel="Course Label">
+                                                <rect key="frame" x="72" y="0.0" width="44.5" height="20.5"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Label">
+                                                        <attributes>
+                                                            <font key="NSFont" size="18" name="ArialMT"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVY-yh-hrZ" userLabel="Countdown Due">
-                                <rect key="frame" x="16" y="194" width="359" height="20.5"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Label">
-                                        <attributes>
-                                            <font key="NSFont" size="18" name="ArialMT"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="19Y-pl-kMg" userLabel="Complete Switch SV">
                                 <rect key="frame" x="45.5" y="577" width="284.5" height="31"/>
                                 <subviews>
@@ -273,26 +298,24 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DP0-QY-r3I" firstAttribute="leading" secondItem="d8o-gr-El0" secondAttribute="leading" constant="20" id="3Mc-F1-eD7"/>
-                            <constraint firstItem="sVY-yh-hrZ" firstAttribute="top" secondItem="Q9q-xM-EVP" secondAttribute="bottom" constant="20" id="4y2-CX-y6c"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Q9q-xM-EVP" secondAttribute="trailing" id="Aq0-FP-BGm"/>
+                            <constraint firstItem="DPN-Sq-X8Z" firstAttribute="top" secondItem="DP0-QY-r3I" secondAttribute="bottom" constant="25" id="Fp1-kC-zrL"/>
                             <constraint firstItem="DP0-QY-r3I" firstAttribute="top" secondItem="uA7-Fh-zL6" secondAttribute="bottom" constant="20" id="FvN-r0-sMs"/>
-                            <constraint firstItem="Q9q-xM-EVP" firstAttribute="leading" secondItem="TEe-wz-iqf" secondAttribute="leadingMargin" id="FvX-a0-PrK"/>
                             <constraint firstItem="nF6-87-emf" firstAttribute="bottom" secondItem="d8o-gr-El0" secondAttribute="bottom" id="LvI-zE-tgW"/>
+                            <constraint firstItem="d8o-gr-El0" firstAttribute="trailing" secondItem="DPN-Sq-X8Z" secondAttribute="trailing" constant="20" id="Srl-99-cjN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DP0-QY-r3I" secondAttribute="trailing" constant="10" id="Xq3-uR-Cgh"/>
                             <constraint firstItem="19Y-pl-kMg" firstAttribute="centerX" secondItem="TEe-wz-iqf" secondAttribute="centerX" id="Z56-2e-t4I"/>
-                            <constraint firstItem="sVY-yh-hrZ" firstAttribute="leading" secondItem="TEe-wz-iqf" secondAttribute="leadingMargin" id="ajm-d1-Klz"/>
                             <constraint firstItem="nF6-87-emf" firstAttribute="leading" secondItem="d8o-gr-El0" secondAttribute="leading" id="cTQ-P8-Gig"/>
                             <constraint firstItem="d8o-gr-El0" firstAttribute="trailing" secondItem="uA7-Fh-zL6" secondAttribute="trailing" id="eDW-WG-gVb"/>
                             <constraint firstItem="nF6-87-emf" firstAttribute="top" secondItem="19Y-pl-kMg" secondAttribute="bottom" constant="15" id="f9T-Js-gbI"/>
                             <constraint firstItem="uA7-Fh-zL6" firstAttribute="leading" secondItem="TEe-wz-iqf" secondAttribute="leading" id="ktc-di-YXj"/>
                             <constraint firstItem="uA7-Fh-zL6" firstAttribute="top" secondItem="d8o-gr-El0" secondAttribute="top" id="n7Q-Qw-DP1"/>
-                            <constraint firstItem="d8o-gr-El0" firstAttribute="trailing" secondItem="sVY-yh-hrZ" secondAttribute="trailing" id="sLE-td-OYr"/>
-                            <constraint firstItem="Q9q-xM-EVP" firstAttribute="top" secondItem="DP0-QY-r3I" secondAttribute="bottom" constant="31" id="siV-rh-7OB"/>
+                            <constraint firstItem="DPN-Sq-X8Z" firstAttribute="leading" secondItem="d8o-gr-El0" secondAttribute="leading" constant="20" id="vzt-G5-3FT"/>
                             <constraint firstItem="nF6-87-emf" firstAttribute="trailing" secondItem="d8o-gr-El0" secondAttribute="trailing" id="xky-J1-CHw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d8o-gr-El0"/>
                     </view>
                     <connections>
+                        <outlet property="affiliatedCouresLabel" destination="Vbs-Ao-RGS" id="9Ox-Vr-gEY"/>
                         <outlet property="dateDueLabel" destination="prY-Ov-Jck" id="FHW-T1-BIk"/>
                         <outlet property="taskCompleteSwitch" destination="32V-Tz-GHA" id="O4F-hN-SJa"/>
                         <outlet property="taskDetailsTitleLabel" destination="DP0-QY-r3I" id="EXd-Rm-hXH"/>
@@ -745,7 +768,7 @@
         <image name="icons8-menu" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rhf-Ks-oKa"/>
-        <segue reference="pJx-1v-iFb"/>
+        <segue reference="DmL-uf-O0c"/>
+        <segue reference="nH7-a3-2Ga"/>
     </inferredMetricsTieBreakers>
 </document>

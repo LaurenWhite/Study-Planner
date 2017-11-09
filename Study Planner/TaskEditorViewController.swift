@@ -67,8 +67,7 @@ class TaskEditorViewController: UIViewController, UIPickerViewDelegate, UIPicker
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         let newTitle = self.nameTextField.text ?? "New Task"
         let newDueDate = dueDatePicker.date
-        //let newCourse = courseDatabase.currentCourse(atIndex: coursePicker.selectedRow(inComponent: coursePicker.selectedRow(inComponent: 0)))
-        let newCourse = CourseDatabase().currentCourse(atIndex: 1)
+        let newCourse = courseDatabase.currentCourse(atIndex: coursePicker.selectedRow(inComponent: 0))
         if let task = self.task {
             task.taskTitle = newTitle
             task.dueDate = newDueDate
