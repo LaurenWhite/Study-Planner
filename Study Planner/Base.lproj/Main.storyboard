@@ -49,27 +49,14 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ybc-9D-B8x">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvf-ct-YdA" userLabel="Add Task Button SV">
                                         <rect key="frame" x="0.0" y="50" width="375" height="38"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FF3-LV-qFe">
-                                                <rect key="frame" x="0.0" y="0.0" width="304" height="38"/>
-                                                <color key="backgroundColor" red="0.94851869344711304" green="0.96497350931167603" blue="0.95660871267318726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="   Add A New Task">
-                                                        <attributes>
-                                                            <font key="NSFont" size="17" name="Chalkboard"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <color key="highlightedColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
-                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSP-Qj-Tuh">
-                                                <rect key="frame" x="304" y="0.0" width="71" height="38"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="38"/>
                                                 <color key="backgroundColor" red="0.94851869344711304" green="0.96497350931167603" blue="0.95660871267318726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="71" id="bDs-C0-gWT"/>
+                                                    <constraint firstAttribute="width" constant="40" id="GlO-hg-AxS"/>
                                                 </constraints>
                                                 <color key="tintColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal">
@@ -79,12 +66,18 @@
                                                     <segue destination="PKu-Nq-mOc" kind="showDetail" action="showViewController:sender:" id="pJx-1v-iFb"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gea-dZ-Zu1">
+                                                <rect key="frame" x="40" y="0.0" width="335" height="38"/>
+                                                <color key="backgroundColor" red="0.94851869339999995" green="0.96497350930000003" blue="0.95660871270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Add A New Task">
+                                                    <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="PKu-Nq-mOc" kind="showDetail" id="7PB-AG-nsE"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.94851869344711304" green="0.96497350931167603" blue="0.95660871267318726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="38" id="v2c-Fi-lkF"/>
-                                        </constraints>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YQG-hY-x2s">
                                         <rect key="frame" x="0.0" y="88" width="375" height="465"/>
@@ -294,6 +287,14 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwb-Bj-O15">
+                                <rect key="frame" x="88" y="527" width="160" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Start This Task!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -613,7 +614,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="769" y="331"/>
+            <point key="canvasLocation" x="769" y="412"/>
         </scene>
         <!--Settings-->
         <scene sceneID="JQR-6m-VGy">
@@ -718,6 +719,7 @@
                             <constraint firstItem="pqX-UV-E3L" firstAttribute="leading" secondItem="7a8-l2-9ZF" secondAttribute="leading" id="LRc-A3-PMt"/>
                             <constraint firstItem="vtU-3U-Eyt" firstAttribute="top" secondItem="Zpr-sp-HdR" secondAttribute="bottom" constant="10" id="LVs-0U-LAF"/>
                             <constraint firstItem="7a8-l2-9ZF" firstAttribute="trailing" secondItem="Zpr-sp-HdR" secondAttribute="trailing" constant="15" id="ORN-h5-fDz"/>
+                            <constraint firstItem="7a8-l2-9ZF" firstAttribute="trailing" secondItem="cZb-Yy-UEy" secondAttribute="trailing" constant="253" id="RJm-Wh-KoS"/>
                             <constraint firstItem="vtU-3U-Eyt" firstAttribute="leading" secondItem="7a8-l2-9ZF" secondAttribute="leading" constant="20" id="Y0M-Ko-EVp"/>
                             <constraint firstItem="Zpr-sp-HdR" firstAttribute="top" secondItem="cZb-Yy-UEy" secondAttribute="bottom" constant="10" id="d6X-c2-0ng"/>
                             <constraint firstItem="cZb-Yy-UEy" firstAttribute="top" secondItem="pqX-UV-E3L" secondAttribute="bottom" constant="40" id="kGH-s7-gjc"/>
@@ -740,7 +742,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ylm-78-4t3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="fDn-bN-zJX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="813.60000000000002" y="1179.7601199400301"/>
+            <point key="canvasLocation" x="769" y="1503"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
