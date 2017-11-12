@@ -31,13 +31,23 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.title = "To-Do List"
     }
 
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return taskDatabase.activeCourses().0
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return taskDatabase.activeCourses().1[section]
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.taskDatabase.countTasks
+        let header = self.tableView(taskTableView, titleForHeaderInSection: section)
+        return taskDatabase.tasksInCoures(courseTitle: header!).0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "task", for: indexPath)
-        let task = self.taskDatabase.currentTask(atIndex: indexPath.row)
+        let header = self.tableView(taskTableView, titleForHeaderInSection: indexPath.section)
+        let task = taskDatabase.tasksInCoures(courseTitle: header!).1[indexPath.row] //self.taskDatabase.currentTask(atIndex: indexPath.row)
         cell.textLabel?.text = task.taskTitle
         if (task.completion) {
             cell.detailTextLabel?.text = "✔︎"
@@ -49,6 +59,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
         if editingStyle == .delete{
+            //Is deleting the wrong row right now. Index path wrong?
+            print(taskDatabase.currentTask(atIndex: indexPath.row).taskTitle)
+            //var index = taskDatabase.currentTask(atIndex: <#T##Int#>)
             taskDatabase.removeTask(int: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             

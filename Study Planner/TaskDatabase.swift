@@ -18,10 +18,34 @@ class TaskDatabase {
         return tasks.count
     }
     
+    func activeCourses() -> (Int, [String]){
+        var activeCourses: [String] = []
+        for task in tasks{
+            if !(activeCourses.contains(task.courseClassification.courseTitle)){
+                activeCourses.append(task.courseClassification.courseTitle)
+            }
+        }
+        return (activeCourses.count, activeCourses)
+    }
+    
+    func tasksInCoures(courseTitle: String) -> (Int, [Task]){
+        var courseTasks: [Task] = []
+        for task in tasks{
+            if (courseTitle == task.courseClassification.courseTitle){
+                courseTasks.append(task)
+            }
+        }
+        return (courseTasks.count, courseTasks)
+    }
+    
     //Returns: The task at the given index
     func currentTask(atIndex index: Int) -> Task {
         return tasks[index]
     }
+    
+    //func currentTaskByName(withTitle: String) -> Task{
+      //  tasks.
+    //}
     
     //Saves the note to the database
     func saveNew(task: Task){
